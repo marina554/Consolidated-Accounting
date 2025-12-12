@@ -1,33 +1,40 @@
-Consolidated Accounting Models (Parent & Subsidiary)
-Overview
+# Consolidated Accounting Models (Parent & Subsidiary)
 
+## Overview
 This repository contains Python scripts to simulate consolidated accounting for a parent company and its subsidiary.
 
 Three levels of models are provided:
 
-Simple Consolidation Model – Eliminates intercompany transactions and creates a basic consolidated B/S.
+1. **Simple Consolidation Model** – Eliminates intercompany transactions and creates a basic consolidated B/S.  
+2. **B/S + P/L Consolidation Model** – Eliminates intercompany transactions and creates both B/S and P/L (including operating income and net income).  
+3. **Full Consolidation with Investment & Equity Elimination** – Eliminates the parent’s investment in the subsidiary against subsidiary equity and calculates Non-Controlling Interest (NCI) accurately.  
 
-B/S + P/L Consolidation Model – Eliminates intercompany transactions and creates both B/S and P/L (including operating income and net income).
+**Purpose:** Educational. These scripts help learners understand the mechanics of consolidation, intercompany transaction elimination, and NCI calculation.
 
-Full Consolidation with Investment & Equity Elimination – Eliminates the parent’s investment in the subsidiary against subsidiary equity and calculates Non-Controlling Interest (NCI) accurately.
+---
 
-Purpose: Educational. These scripts help learners understand the mechanics of consolidation, intercompany transaction elimination, and NCI calculation.
+## Features Comparison
 
-Features Comparison
-Feature	Simple Model	B/S + P/L Model	Full Investment Model
-Intercompany transaction elimination	✅	✅	✅
-Consolidated B/S	✅	✅	✅
-Consolidated P/L	❌	✅	✅
-Investment & Equity elimination	❌	❌	✅
-Non-Controlling Interest (NCI)	Basic	Calculated	Accurate
-Output format	pandas DataFrame	pandas DataFrame	pandas DataFrame
-Learning target	Beginner	Intermediate	Advanced
-Workflow Diagram (Text-based)
+| Feature | Simple Model | B/S + P/L Model | Full Investment Model |
+|---------|--------------|----------------|---------------------|
+| Intercompany transaction elimination | ✅ | ✅ | ✅ |
+| Consolidated B/S | ✅ | ✅ | ✅ |
+| Consolidated P/L | ❌ | ✅ | ✅ |
+| Investment & Equity elimination | ❌ | ❌ | ✅ |
+| Non-Controlling Interest (NCI) | Basic | Calculated | Accurate |
+| Output format | pandas DataFrame | pandas DataFrame | pandas DataFrame |
+| Learning target | Beginner | Intermediate | Advanced |
 
-Parent & Subsidiary Accounts
-|
-+-----------------+-----------------+
-| | |
+---
+
+## Workflow Diagram
+
+
+             Parent & Subsidiary Accounts
+                      |
+    +-----------------+-----------------+
+    |                 |                 |
+
 Simple Model B/S + P/L Model Full Investment Model
 (Eliminate AR/AP) (Eliminate AR/AP) (Eliminate AR/AP + Investment & Equity)
 | | |
@@ -60,12 +67,13 @@ python full_consolidation.py
 Example Output (Full Investment Model)
 
 ==== CONSOLIDATED BALANCE SHEET (B/S) ====
-Cash Accounts Receivable Inventory Accounts Payable Non-Controlling Interests
-Consolidated 1300 600 400 550 140
+                     Cash  Accounts Receivable  Inventory  Accounts Payable  Non-Controlling Interests
+Consolidated         1300                  600       400              550                    140
 
 ==== CONSOLIDATED INCOME STATEMENT (P/L) ====
-Sales COGS SG&A Operating Income Net Income Attributable to NCI Net Income Attributable to Parent
-Consolidated 2500 1000 400 1100 60 1040
+                     Sales  COGS  SG&A  Operating Income  Net Income Attributable to NCI  Net Income Attributable to Parent
+Consolidated         2500  1000   400             1100                           60                        1040
+
 
 Notes
 
@@ -116,10 +124,11 @@ B/S＋P/L連結モデル – 親子間取引の消去に加え、B/SとP/L（営
 学習対象	初心者	中級者	上級者
 処理フロー図（テキスト版）
 
-親会社・子会社の財務データ
-|
-+-----------------+-----------------+
-| | |
+             親会社・子会社の財務データ
+                      |
+    +-----------------+-----------------+
+    |                 |                 |
+
 シンプルモデル B/S＋P/Lモデル 投資・資本消去モデル
 (売掛金/買掛金消去) (売掛金/買掛金消去) (売掛金/買掛金 + 投資・資本消去)
 | | |
@@ -152,12 +161,13 @@ python full_consolidation.py
 出力例（投資・資本消去モデル）
 
 ==== 連結貸借対照表 (B/S) ====
-現金 売掛金 棚卸資産 買掛金 非支配株主持分
-連結 1300 600 400 550 140
+                     現金  売掛金  棚卸資産  買掛金  非支配株主持分
+連結                 1300   600     400     550            140
 
 ==== 連結損益計算書 (P/L) ====
-売上高 売上原価 販管費 営業利益 非支配株主持分当期純利益 親会社帰属当期純利益
-連結 2500 1000 400 1100 60 1040
+                     売上高  売上原価  販管費  営業利益  非支配株主持分当期純利益  親会社帰属当期純利益
+連結                 2500    1000     400    1100               60                    1040
+
 
 注意事項
 
