@@ -1,7 +1,7 @@
-# Consolidated Accounting Models (Parent & Subsidiary)
+## Consolidated Accounting Models (Parent & Subsidiary)
 
 ## Overview
-This repository contains **Python scripts to simulate consolidated accounting** for a parent company and its subsidiary.  
+This repository contains Python scripts to simulate consolidated accounting for a parent company and its subsidiary.
 
 Three levels of models are provided:
 
@@ -110,13 +110,13 @@ MIT License
 # 連結会計モデル（親会社＋子会社）
 
 ## 概要
-このリポジトリには、親会社と子会社の**連結会計をPythonでシミュレーションするスクリプト**が含まれています。  
+このリポジトリには、親会社と子会社の**連結会計をPythonでシミュレーションするスクリプト**が含まれています。
 
 3つのレベルのモデルを提供しています：
 
 1. **シンプル連結モデル** – 親子間取引の消去と基本的な連結B/Sの作成  
 2. **B/S＋P/L連結モデル** – 親子間取引の消去に加え、B/SとP/L（営業利益・当期純利益）を作成  
-3. **投資・資本消去付きフル連結モデル** – 親会社の子会社投資を子会社資本と相殺し、正確な非支配株主持分（NCI）を計算  
+3. **投資・資本消去付きフル連結モデル** – 親会社の子会社投資を子会社資本と相殺し、非支配株主持分（NCI）を正確に計算  
 
 **目的:** 学習・教育用。連結会計の仕組み、親子間取引の消去、NCIの計算方法を理解するための教材。
 
@@ -211,3 +211,6 @@ yaml
 中級者: B/S＋P/Lモデル → 営業利益・当期純利益の連結を学習
 
 上級者: 投資・資本消去モデル → 投資相殺・NCI計算を含むフル連結を理解
+
+ライセンス
+MIT License
